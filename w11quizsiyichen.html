@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 10px;
+            height: 100vh;
+        }
+
+        .main-image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-image img {
+            max-width: 100%;
+            max-height: 80%;
+        }
+
+        .main-title {
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .thumbnails {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            overflow: auto;
+        }
+
+        .thumbnail {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid #ccc;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .thumb-title {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+       .main-svg {
+            width: 80%;
+            height: 80%;
+        }
+
+    </style>
+    <script>
+        function changeImage(svgHTML, title) {
+            document.getElementById('main-svg-container').innerHTML = svgHTML;
+            document.getElementById('main-title').innerText = title;
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="main-image">
+            <h1 id="main-title">SIYICHENWEEK11QUIZ</h1>
+            <div id="main-svg-container">
+                <svg id="main-svg" class="main-svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" stroke="red" stroke-width="3" fill="purple" />
+                </svg>
+            </div>
+        </div>
+        <div class="thumbnails">
+            <!-- Thumbnails 1 -->
+            <div class="thumbnail" onclick="changeImage('<svg class=\'main-svg\' preserveAspectRatio=\'xMidYMid meet\' viewBox=\'0 0 100 100\'><circle cx=\'50\' cy=\'50\' r=\'40\' stroke=\'red\' stroke-width=\'3\' fill=\'purple\' /></svg>', 'Image 1')">
+                <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" stroke="red" stroke-width="3" fill="purple" />
+                </svg>
+                <div class="thumb-title">Image 1</div>
+            </div>
+            <!-- Thumbnail 2 -->
+            <div class="thumbnail" onclick="changeImage('<svg class=\'main-svg\' preserveAspectRatio=\'xMidYMid meet\' viewBox=\'0 0 100 100\'><rect x=\'20\' y=\'20\' width=\'60\' height=\'60\' stroke=\'red\' stroke-width=\'3\' fill=\'blue\' /></svg>', 'Image 2')">
+                <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100">
+                    <rect x="20" y="20" width="60" height="60" stroke="red" stroke-width="3" fill="blue" />
+                </svg>
+                <div class="thumb-title">Image 2</div>
+            </div>
+            <!-- Thumbnail 3 -->
+            <div class="thumbnail" onclick="changeImage('<svg class=\'main-svg\' preserveAspectRatio=\'xMidYMid meet\' viewBox=\'0 0 100 100\'><ellipse cx=\'50\' cy=\'50\' rx=\'40\' ry=\'30\' stroke=\'black\' stroke-width=\'3\' fill=\'green\' /></svg>', 'Image 3')">
+                <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100">
+                    <ellipse cx="50" cy="50" rx="40" ry="30" stroke="black" stroke-width="3" fill="green" />
+                </svg>
+                <div class="thumb-title">Image 3</div>
+            </div>
+            <!--Thumbnail 4 -->
+            <div class="thumbnail" onclick="changeImage('<svg class=\'main-svg\' preserveAspectRatio=\'xMidYMid meet\' viewBox=\'0 0 100 100\'><polygon points=\'50,10 10,90 90,90\' stroke=\'black\' stroke-width=\'3\' fill=\'yellow\' /></svg>', 'Image 4')">
+                <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100">
+                    <polygon points="50,10 10,90 90,90" stroke="black" stroke-width="3" fill="yellow" />
+                </svg>
+            <div class="thumb-title">Image 4</div>
+            </div>
+            <!-- Thumbnail 5 -->
+<div class="thumbnail" onclick="changeImage('<svg class=\'main-svg\' preserveAspectRatio=\'xMidYMid meet\' viewBox=\'0 0 100 100\'><polyline points=\'10,10 50,50 10,90\' stroke=\'black\' stroke-width=\'3\' fill=\'none\' /></svg>', 'Image 5')">
+<svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100">
+<polyline points="10,10 50,50 10,90" stroke="black" stroke-width="3" fill="none" />
+</svg>
+<div class="thumb-title">Image 5</div>
+</div>
+<!-- Thumbnail 6 -->
+<div class="thumbnail" onclick="changeImage('<svg class=\'main-svg\' preserveAspectRatio=\'xMidYMid meet\' viewBox=\'0 0 100 100\'><path d=\'M10 10 Q50 50 90 10\' stroke=\'black\' stroke-width=\'3\' fill=\'none\' /></svg>', 'Image 6')">
+<svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100">
+<path d="M10 10 Q50 50 90 10" stroke="black" stroke-width="3" fill="none" />
+</svg>
+<div class="thumb-title">Image 6</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
